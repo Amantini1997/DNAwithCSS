@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./3dEffects.css">
+    <script>
+        function generate(lines){
+            console.log("now")
+            var pivot = document.querySelector(".pivot");
+            var last = pivot;
+            for(let i = 0; i < lines; ++i){
+                last.innerHTML = `------------<div class="fixedDiv${Math.random()<0.5 ? " invertColor" : ""}${Math.random()<0.5 ? " invertGradient" : ""}"></div>`;
+                last = last.children[0];
+            }
+        };
+        setTimeout(() => generate(100), 100);
+    </script>
+</head>
+<body>
+
+<h1>DNA</h1>
+
+<div id="div1">
+  <div class="pivot"></div>
+</div>
+
+</body>
+</html>
