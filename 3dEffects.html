@@ -3,14 +3,26 @@
 <head>
     <link rel="stylesheet" href="./3dEffects.css">
     <script>
+        function appendLine(last, lines) {
+            setTimeout(() => {
+                console.log("h");
+                if(--lines >= 0){
+                    last.innerHTML = `------------<div class="fixedDiv${Math.random()<0.5 ? " invertColor" : ""}${Math.random()<0.5 ? " invertGradient" : ""}"></div>`;
+                    last = last.children[0];
+                    last = appendLine(last, lines);
+                }
+            }, 100);
+        }
+
         function generate(lines){
-            console.log("now")
             var pivot = document.querySelector(".pivot");
             var last = pivot;
-            for(let i = 0; i < lines; ++i){
-                last.innerHTML = `------------<div class="fixedDiv${Math.random()<0.5 ? " invertColor" : ""}${Math.random()<0.5 ? " invertGradient" : ""}"></div>`;
-                last = last.children[0];
-            }
+            setTimeout(() => {
+                appendLine(last, lines);
+            }, 100);
+            // for(let i = 0; i < lines; ++i) {
+            //     last = appendLine(last);
+            // }
         };
         setTimeout(() => generate(100), 100);
     </script>
