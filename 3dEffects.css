@@ -29,7 +29,7 @@ body {
     width: 100px;
     left: 2px;
     color: transparent;
-    background-image:  linear-gradient(rgba(255, 255, 255, .5), rgb(0,0,0,0), rgb(0,0,0,.3)), linear-gradient(90deg, blue, red);
+    background-image:  linear-gradient(rgba(255, 255, 255, .5), rgb(0,0,0,0), rgb(0,0,0,.3)), linear-gradient(90deg, blue 50%, red 50%);
     /* border: 1px solid black; */
     transform: rotate3d(0, 1, 0, 20deg);
     transform-style: preserve-3d;
@@ -72,15 +72,15 @@ body {
 }
 
 .invertColor {
-    background-image: linear-gradient(rgba(255, 255, 255, .5), rgb(0,0,0,0), rgb(0,0,0,.3)), linear-gradient(90deg, yellow,green);
+    background-image: linear-gradient(rgba(255, 255, 255, .5), rgb(0,0,0,0), rgb(0,0,0,.3)), linear-gradient(90deg, yellow 50%,green 50%);
 }
 
 .invertGradient {
-    background-image: linear-gradient(rgba(255, 255, 255, .5), rgb(0,0,0,0), rgb(0,0,0,.3)), linear-gradient(90deg, red,blue);
+    background-image: linear-gradient(rgba(255, 255, 255, .5), rgb(0,0,0,0), rgb(0,0,0,.3)), linear-gradient(90deg, red 50%,blue 50%);
 }
 
 .invertColor.invertGradient {
-    background-image: linear-gradient(rgba(255, 255, 255, .5), rgb(0,0,0,0), rgb(0,0,0,.3)), linear-gradient(90deg, green,yellow);
+    background-image: linear-gradient(rgba(255, 255, 255, .5), rgb(0,0,0,0), rgb(0,0,0,.3)), linear-gradient(90deg, green 50%,yellow 50%);
 }
 
 
