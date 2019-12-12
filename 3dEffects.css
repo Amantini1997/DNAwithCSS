@@ -13,13 +13,6 @@ body {
     overflow-y: hidden; 
 }
 
-@media only screen and (vmin: 500px) {
-    .container {
-        display: grid;
-        grid-template-columns: auto;
-    }
-}
-    
 .description {
     text-align: justify;
 }
